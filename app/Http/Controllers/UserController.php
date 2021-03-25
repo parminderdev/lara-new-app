@@ -10,6 +10,6 @@ class UserController extends Controller
     public function index()
     {
         # code...
-        return('This is from the User Controller');
+        return 'This is from the User Controller';
     }
 }
