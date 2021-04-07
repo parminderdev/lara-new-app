@@ -18,24 +18,36 @@ class UserController extends Controller
         // DB::insert('insert into users ( name,email,password) values (?, ?,?)', ['Marc3','parm3@demo.com','pinka']);
         // # code...
 
-        $user = User::all();
-        //return $user;
-       $deletedRows = User::where('id', 2)->delete();
+          $user = new User();
+        dd($user);
 
-       $data = [
-        'name' => 'parminder12',
-        'email' => 'parm85@demo.com',
-        'password' => '154641'
+        User::where('id',11)->delete();
+    //     $user = User::all();
+    //     //return $user;
+    //    $deletedRows = User::where('id', 2)->delete();
 
-       ];
+    //    $data = [
+    //     'name' => 'parminder12',
+    //     'email' => 'parm85@demo.com',
+    //     'password' => '154641'
 
-       User::create($data);
+    //    ];
 
-       $user1 = User::create([
-        'name' => 'Taylor',
-        'email' => 'Otwell',
-        'password' => bcrypt('Developer'),
-    ]);
+    // //    User::create($data);
+    // DB::table('users')
+    // ->updateOrInsert(
+    //     ['email' => 'parm@demo.com', 'name' => 'rahul'],['password' => 'new']
+    // );
+    
+    // DB::table('customer')
+    // ->updateOrInsert(
+    //     ['email' => 'parm@demo.com', 'name' => 'rahul'],['password' => 'new']
+    // );
+    //    $user1 = User::create([
+    //     'name' => 'Taylor',
+    //     'email' => 'Otwell',
+    //     'password' => bcrypt('Developer'),
+    // ]);
 
         foreach ($user as $U) {
             echo  $U->name;
