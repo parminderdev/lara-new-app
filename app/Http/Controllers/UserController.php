@@ -17,7 +17,7 @@ class UserController extends Controller
         // var_dump($user);
         // DB::insert('insert into users ( name,email,password) values (?, ?,?)', ['Marc3','parm3@demo.com','pinka']);
         // # code...
-
+  
           $user = new User();
         dd($user);
 
